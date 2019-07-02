@@ -82,3 +82,7 @@ end
 ## Gemfile for Rails 3+, Sinatra, and Merb
 gem 'will_paginate', '>=3.1'
 
+#map
+gem "geocoder"
+
+gem "figaro"
