@@ -1,6 +1,6 @@
 class PlacesController < ApplicationController
 	before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
-	
+
 	def index
   	@places = Place.paginate(page: params[:page], per_page: 4)
 	end
@@ -36,7 +36,7 @@ class PlacesController < ApplicationController
 		end
 
 		@place.update_attributes(place_params)
-		
+
 		if @place.valid?
 			redirect_to root_path
 		else
